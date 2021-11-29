@@ -1,5 +1,7 @@
 import cv2
 import mediapipe as mp
+import time
+
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
@@ -72,6 +74,8 @@ with mp_hands.Hands(
     cv2.imshow('HandTracking', cv2.flip(image, 1))
     if cv2.waitKey(5) & 0xFF == 27:
       break
+    
+  
 
 print("Merge codul! (nam habar cum sa adaug commands casa apara commandele)")
 
