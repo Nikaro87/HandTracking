@@ -1,5 +1,5 @@
-# Programu Vechi
-Daca merge ceva gresti. E vechiu program.
+# Despre
+Tracking la tot. Folosind python (pip)
 
 #Credits
 
