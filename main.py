@@ -25,7 +25,7 @@ while True:
                 cx,cy = int(landmark.x*w), int(landmark.y*h)
                 print(id,cx,cy)
                 if id ==0:
-                    cv2.circle(img, (cx,cy), 15,(255,0,255), cv2.FILLED)
+                    cv2.circle(img, (cx,cy), 15,(0, 0, 255), cv2.FILLED)
 
             mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
 
@@ -33,9 +33,8 @@ while True:
     fps = 1/(cTime-pTime)
     pTime = cTime
 
-    cv2.putText(img,str(int(fps)),(10,70), cv2.FONT_HERSHEY_PLAIN,3,
-                (255,0,255))
+    cv2.putText(img,str(int(fps)),(20,90), cv2.FONT_HERSHEY_SIMPLEX,3,
+                 	(62,58,58))
 
-
-    cv2.imshow("Image", img)
+    cv2.imshow("Camera", img)
     cv2.waitKey(1)
