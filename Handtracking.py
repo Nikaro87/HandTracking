@@ -5,7 +5,6 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
-# For static images:
 IMAGE_FILES = []
 with mp_hands.Hands(
     static_image_mode=True,
@@ -52,7 +51,7 @@ with mp_hands.Hands(
     success, image = cap.read()
     if not success:
       print("ERROR.")
-      # If loading a video, use 'break' instead of 'continue'.
+    
       continue
 
     image.flags.writeable = False
@@ -74,9 +73,6 @@ with mp_hands.Hands(
     if cv2.waitKey(5) & 0xFF == 27:
       break
     
-    
-
-print("Merge codul! (nam habar cum sa adaug commands casa apara commandele)")
 
 cap.release()
 
